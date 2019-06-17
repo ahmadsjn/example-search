@@ -14,10 +14,10 @@ class HomeController extends Controller
         { 
             $c = $string[$i];
             
-            if(array_search($c, $h)){
+            if(in_array($c, $h)){
                 return $c;
             }else{
-                $h[$i+1] = $c;
+                array_push($h, $c);
             }
         } 
     
